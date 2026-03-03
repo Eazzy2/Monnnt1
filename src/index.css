@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-verse-bg: #0d0d0d;
+  --color-verse-primary: #7B3FE4;
+  --color-verse-accent: #A970FF;
+  --color-verse-text: #ffffff;
+  --color-verse-muted: #a1a1aa;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-verse-bg text-verse-text font-sans antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-white/5 border border-white/10 backdrop-blur-md;
+}
+
+.verse-gradient {
+  @apply bg-gradient-to-br from-verse-primary to-verse-accent;
+}
+
+.verse-glow {
+  @apply shadow-[0_0_20px_rgba(123,63,228,0.3)];
+}
